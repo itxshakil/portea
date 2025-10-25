@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react"
 import { ChevronDown, Menu, X, Phone, ChevronRight } from "lucide-react"
 import Logo from "../assets/logo.png"
 import IndiaFlag from "../assets/ind.png"
+import {Link} from "react-router-dom";
 
 const services = [
     { name: "Doctor Consultation", href: "/services/doctor-consultation", description: "Connect with qualified doctors online or in-person" },
@@ -55,9 +56,9 @@ const ServicesDropdown = () => {
 
                 <div className="py-2">
                     {services.map((service) => (
-                        <a
+                        <Link
                             key={service.name}
-                            href={service.href}
+                            to={service.href}
                             className="flex items-start gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150 group"
                         >
                             <div className="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-teal-100 text-teal-600 dark:bg-teal-900 dark:text-teal-200 flex items-center justify-center">
@@ -70,15 +71,15 @@ const ServicesDropdown = () => {
                                 </div>
                                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{service.description}</p>
                             </div>
-                        </a>
+                        </Link>
                     ))}
                 </div>
 
                 <div className="p-3 bg-gray-50 dark:bg-gray-700 border-t border-gray-100 dark:border-gray-600">
-                    <a href="/services" className="text-sm text-teal-600 hover:text-teal-700 font-medium flex items-center">
+                    <Link to="/services" className="text-sm text-teal-600 hover:text-teal-700 font-medium flex items-center">
                         View all services
                         <ChevronRight className="ml-1 w-4 h-4" />
-                    </a>
+                    </Link>
                 </div>
             </div>
 
@@ -104,25 +105,25 @@ export default function Header() {
             }`}
         >
             <div className="container flex items-center justify-between h-16 px-4 mx-auto md:px-6">
-                <a href="/" className="flex items-center mr-6">
+                <Link to="/" className="flex items-center mr-6">
                     <img src={Logo} alt="Nurse Plus Logo" width={150} height={40} className="h-24 w-auto" />
-                </a>
+                </Link>
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center gap-2 flex-grow justify-end">
                     <ServicesDropdown />
-                    <a
-                        href="/about"
+                    <Link
+                        to="/about"
                         className="font-medium px-3 py-2 rounded-lg text-gray-700 hover:text-teal-600 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-teal-400 dark:hover:bg-gray-800 transition-colors duration-200"
                     >
                         About Us
-                    </a>
-                    <a
-                        href="/services"
+                    </Link>
+                    <Link
+                        to="/services"
                         className="font-medium px-3 py-2 rounded-lg text-gray-700 hover:text-teal-600 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-teal-400 dark:hover:bg-gray-800 transition-colors duration-200"
                     >
                         Our Services
-                    </a>
+                    </Link>
 
                     <div className="flex items-center ml-6 bg-gray-50 px-4 py-2 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
                         <div className="flex items-center">
@@ -138,12 +139,12 @@ export default function Header() {
                         {/*<span className="text-sm font-medium text-gray-800 dark:text-gray-200">8310853708</span>*/}
                     </div>
 
-                    <a
-                        href="/book-now"
+                    <Link
+                        to="/book-now"
                         className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 ml-4 px-5 py-2 rounded-lg text-white font-medium text-sm transition-all duration-200 shadow-sm hover:shadow flex items-center justify-center"
                     >
                         Book Now
-                    </a>
+                    </Link>
                 </nav>
 
                 <button
@@ -181,9 +182,9 @@ export default function Header() {
                     <nav className="flex-1 overflow-y-auto">
                         <div className="p-4 space-y-3">
                             {services.map((service) => (
-                                <a
+                                <Link
                                     key={service.name}
-                                    href={service.href}
+                                    to={service.href}
                                     className="flex items-center justify-between p-3 rounded-lg bg-gray-50 dark:bg-gray-800 hover:bg-teal-50 dark:hover:bg-teal-700 hover:text-teal-700 transition-colors duration-200"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
@@ -194,28 +195,28 @@ export default function Header() {
                                         <span className="font-medium">{service.name}</span>
                                     </div>
                                     <ChevronRight className="w-4 h-4 text-gray-400 dark:text-gray-200" />
-                                </a>
+                                </Link>
                             ))}
                         </div>
 
                         <div className="px-4 pb-4">
                             <div className="h-px bg-gray-200 dark:bg-gray-700 dark:text-white my-4"></div>
-                            <a
-                                href="/about"
+                            <Link
+                                to="/about"
                                 className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 <span className="font-medium">About Us</span>
                                 <ChevronRight className="w-4 h-4 text-gray-400 dark:text-gray-200" />
-                            </a>
-                            <a
-                                href="/services"
+                            </Link>
+                            <Link
+                                to="/services"
                                 className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 <span className="font-medium">Our Services</span>
                                 <ChevronRight className="w-4 h-4 text-gray-400 dark:text-gray-200" />
-                            </a>
+                            </Link>
                             <div className="h-px bg-gray-200 dark:bg-gray-700 my-4"></div>
 
                             <a href="tel:+918310853708" className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-100 dark:border-gray-700 flex items-center justify-between mb-4">
@@ -229,13 +230,13 @@ export default function Header() {
                     </nav>
 
                     <div className="sticky bottom-0 p-4 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-700">
-                        <a
-                            href="/book-now"
+                        <Link
+                            to="/book-now"
                             className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 py-3 text-center rounded-lg text-white font-medium shadow-sm hover:shadow block w-full transition-all duration-200"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Book Now
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
