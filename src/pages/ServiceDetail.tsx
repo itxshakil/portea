@@ -262,147 +262,196 @@ function Button({
 }
 
 export default function ServicePage() {
-  const { service } = useParams<{ service: string }>();
-  const navigate = useNavigate();
-  
-  // Check if service exists, otherwise navigate to 404
-  useEffect(() => {
-    if (!service || !services[service]) {
-      navigate('/404');
-    }
-  }, [service, navigate]);
-  
-  if (!service || !services[service]) {
-    return null;
-  }
-  
-  const serviceData = services[service];
-  
-  // Helper to format service name
-  const formatServiceName = (serviceName: string) => {
-    return serviceName
-      .split("-")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
-  };
+    const { service } = useParams<{ service: string }>();
+    const navigate = useNavigate();
 
-  // Set document title
-  useEffect(() => {
-    document.title = `${serviceData.title} - Portea Bangalore`;
-  }, [serviceData.title]);
+    useEffect(() => {
+        if (!service || !services[service]) {
+            navigate('/404');
+        }
+    }, [service, navigate]);
 
-  return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-teal-50 py-12 md:py-20">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-6">
-              <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
-                {serviceData.title}
-                <span className="block text-teal-600 mt-2">in Bangalore</span>
-              </h1>
-              <p className="text-gray-600 text-lg">{serviceData.description}</p>
-              <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 h-auto text-lg">
-                <Link to="/book-now" className="inline-block">Book Now</Link>
-              </Button>
-            </div>
-            <div className="relative">
-              <div className="relative h-[300px] md:h-[400px] w-full rounded-lg overflow-hidden">
-                <img
-                  src={serviceData.image || "/placeholder.svg"}
-                  alt={serviceData.title}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    if (!service || !services[service]) return null;
 
-      {/* Features Section */}
-      <section className="py-16 bg-white">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              Our {formatServiceName(service)} Services
-            </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              Comprehensive healthcare solutions delivered at your doorstep in Bangalore
-            </p>
-          </div>
+    const serviceData = services[service];
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Service Features</h3>
-              <ul className="space-y-3">
-                {serviceData.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <div className="h-6 w-6 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="h-2 w-2 rounded-full bg-teal-600"></div>
+    const formatServiceName = (serviceName: string) =>
+        serviceName
+            .split("-")
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ");
+
+    useEffect(() => {
+        document.title = `${serviceData.title} - Nurse Plus Bangalore`;
+    }, [serviceData.title]);
+
+    return (
+        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200 transition-colors duration-300">
+            {/* Hero Section */}
+            <section className="bg-teal-50 dark:bg-gray-800 py-12 md:py-20">
+                <div className="container px-4 md:px-6 mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div className="space-y-6">
+                            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+                                {serviceData.title}
+                                <span className="block text-teal-600 dark:text-teal-400 mt-2">in Bangalore</span>
+                            </h1>
+                            <p className="text-gray-600 dark:text-gray-300 text-lg">{serviceData.description}</p>
+                            <Button asChild className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 ml-4 px-5 py-2 rounded-lg text-white font-medium text-sm transition-all duration-200 shadow-sm hover:shadow flex items-center justify-center">
+                                <Link to="/book-now" className="inline-block">Book Now</Link>
+                            </Button>
+                        </div>
+                        <div className="relative">
+                            <div className="relative h-[300px] md:h-[400px] w-full rounded-lg overflow-hidden">
+                                <img
+                                    src={serviceData.image || "/placeholder.svg"}
+                                    alt={serviceData.title}
+                                    className="object-cover w-full h-full"
+                                />
+                            </div>
+                        </div>
                     </div>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                </div>
+            </section>
 
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Benefits</h3>
-              <ul className="space-y-3">
-                {serviceData.benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <div className="h-6 w-6 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="h-2 w-2 rounded-full bg-orange-500"></div>
+            {/* Features Section */}
+            <section className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+                <div className="container px-4 md:px-6 mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold mb-4">
+                            Our {formatServiceName(service)} Services
+                        </h2>
+                        <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                            Comprehensive healthcare solutions delivered at your doorstep in Bangalore
+                        </p>
                     </div>
-                    <span>{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              Common questions about our {formatServiceName(service)} services in Bangalore
-            </p>
-          </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg transition-colors duration-300">
+                            <h3 className="text-xl font-semibold mb-4">Service Features</h3>
+                            <ul className="space-y-3">
+                                {serviceData.features.map((feature, index) => (
+                                    <li key={index} className="flex items-start gap-2">
+                                        <div className="h-6 w-6 rounded-full bg-teal-100 dark:bg-teal-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                            <div className="h-2 w-2 rounded-full bg-teal-600 dark:bg-teal-400"></div>
+                                        </div>
+                                        <span>{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
 
-          <div className="max-w-3xl mx-auto space-y-6">
-            {serviceData.faqs.map((faq, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-semibold mb-2">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg transition-colors duration-300">
+                            <h3 className="text-xl font-semibold mb-4">Benefits</h3>
+                            <ul className="space-y-3">
+                                {serviceData.benefits.map((benefit, index) => (
+                                    <li key={index} className="flex items-start gap-2">
+                                        <div className="h-6 w-6 rounded-full bg-green-100 dark:bg-green-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                            <div className="h-2 w-2 rounded-full bg-green-500 dark:bg-green-400"></div>
+                                        </div>
+                                        <span>{benefit}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-teal-600 text-white">
-        <div className="container px-4 md:px-6 mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Book Your Service?</h2>
-          <p className="max-w-2xl mx-auto mb-8">
-            Experience quality healthcare in the comfort of your home in Bangalore. Our professional team is ready to
-            assist you.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild className="bg-white text-teal-600 hover:bg-gray-100 px-8">
-              <Link to="/book-now" className="inline-block py-2 px-4">Book Now</Link>
-            </Button>
-            <Button asChild variant="outline" className="border-white text-white hover:bg-teal-700 px-8">
-              <Link to="tel:+18001212323" className="inline-block py-2 px-4">Call Us</Link>
-            </Button>
-          </div>
+            {/* FAQ Section */}
+            <section className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+                <div className="container px-4 md:px-6 mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+                        <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                            Common questions about our {formatServiceName(service)} services in Bangalore
+                        </p>
+                    </div>
+
+                    <div className="max-w-3xl mx-auto space-y-6">
+                        {serviceData.faqs.map((faq, index) => (
+                            <div key={index} className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm transition-colors duration-300">
+                                <h3 className="text-lg font-semibold mb-2">{faq.question}</h3>
+                                <p className="text-gray-600 dark:text-gray-300">{faq.answer}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            {/* CTA Section */}
+            <section className="py-16 bg-teal-600 dark:bg-teal-700 text-white transition-colors duration-300">
+                <div className="container px-4 md:px-6 mx-auto text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+                    <p className="max-w-2xl mx-auto mb-10 text-lg md:text-xl text-white/90">
+                        Experience professional healthcare in the comfort of your home in Bangalore. Our expert team is ready to assist you.
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        {/* Primary CTA: Call Now */}
+                        <a
+                            href="tel:+918310853708"
+                            className="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 inline-flex items-center justify-center gap-2"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="h-5 w-5"
+                            >
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.85.32 1.68.57 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.58a2 2 0 0 1 2.11-.45c.82.25 1.65.44 2.5.57a2 2 0 0 1 1.72 2z" />
+                            </svg>
+                            Call Now
+                        </a>
+
+                        {/* Secondary CTA: Book Now */}
+                        <a
+                            href="/book-now"
+                            className="bg-white text-teal-600 dark:bg-gray-100 dark:text-teal-600 px-6 py-3 rounded-lg font-medium text-lg shadow hover:shadow-md transition transform hover:-translate-y-0.5 inline-flex items-center justify-center"
+                        >
+                            Book Now
+                        </a>
+
+                        {/* Tertiary CTA: WhatsApp */}
+                        <button
+                            onClick={() => {
+                                const phoneNumber = "918310853708";
+                                const message =
+                                    "Hello! 👋 I'm interested in Nurse Plus’s home healthcare services. Could you please help me book an appointment or share more details?";
+                                const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                                window.open(whatsappLink, "_blank");
+                            }}
+                            className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium text-lg shadow hover:shadow-md transition transform hover:-translate-y-0.5 inline-flex items-center justify-center gap-2"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="h-5 w-5"
+                            >
+                                <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9l-5.05.9" />
+                                <path d="M9 10a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+                            </svg>
+                            WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+
         </div>
-      </section>
-    </div>
-  );
+    );
 }

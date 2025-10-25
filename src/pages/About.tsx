@@ -12,17 +12,17 @@ const AboutPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
-                About Portea Medical
+                About Nurse Plus Medical
                 <span className="block text-teal-600 mt-2">Bangalore&apos;s Trusted Home Healthcare Provider</span>
               </h1>
               <p className="text-gray-600 text-lg">
-                Since our inception, Portea has been committed to transforming healthcare delivery in India by providing
+                Since our inception, Nurse Plus has been committed to transforming healthcare delivery in India by providing
                 high-quality medical services in the comfort of patients&apos; homes.
               </p>
             </div>
             <div className="relative">
               <div className="relative h-[300px] md:h-[700px] w-full rounded-lg overflow-hidden">
-                <img src={About} alt="Portea Medical Team" className="object-cover w-full h-full" />
+                <img src={About} alt="Nurse Plus Medical Team" className="object-cover w-full h-full" />
               </div>
             </div>
           </div>
@@ -35,18 +35,18 @@ const AboutPage: React.FC = () => {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Story</h2>
             <p className="text-gray-600">
-              Founded with a vision to revolutionize healthcare delivery in India, Portea has grown to become the
+              Founded with a vision to revolutionize healthcare delivery in India, Nurse Plus has grown to become the
               leading provider of home healthcare services in Bangalore and across the country.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
-              <img src={Journey} alt="Portea's Journey" className="object-cover w-full h-full" />
+              <img src={Journey} alt="Nurse Plus's Journey" className="object-cover w-full h-full" />
             </div>
             <div className="space-y-6">
               <p className="text-gray-600">
-                Portea was established in 2013 with the goal of addressing the growing need for quality healthcare
+                Nurse Plus was established in 2013 with the goal of addressing the growing need for quality healthcare
                 services outside of hospital settings. We recognized that many patients, especially the elderly and
                 those with chronic conditions, faced challenges in accessing regular medical care due to mobility issues
                 or the inconvenience of hospital visits.
@@ -57,7 +57,7 @@ const AboutPage: React.FC = () => {
                 patient-centered care, innovation in healthcare delivery, and a passion for improving health outcomes.
               </p>
               <p className="text-gray-600">
-                Today, Portea is a trusted name in home healthcare, known for our professional team, comprehensive
+                Today, Nurse Plus is a trusted name in home healthcare, known for our professional team, comprehensive
                 services, and dedication to quality care. We continue to evolve and expand our offerings to meet the
                 changing healthcare needs of our patients in Bangalore and beyond.
               </p>
@@ -143,7 +143,7 @@ const AboutPage: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Leadership Team</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Meet the experienced professionals leading Portea's mission to transform healthcare delivery in Bangalore
+              Meet the experienced professionals leading Nurse Plus's mission to transform healthcare delivery in Bangalore
             </p>
           </div>
 
@@ -176,7 +176,7 @@ const AboutPage: React.FC = () => {
         <div className="container px-4 md:px-6 mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Experience Quality Healthcare at Home</h2>
           <p className="max-w-2xl mx-auto mb-8">
-            Join thousands of satisfied patients in Bangalore who trust Portea for their home healthcare needs.
+            Join thousands of satisfied patients in Bangalore who trust Nurse Plus for their home healthcare needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -186,7 +186,7 @@ const AboutPage: React.FC = () => {
               Book a Service
             </a>
             <a
-              href="/contact"
+              href="tel:+9183108537080"
               className="border border-white text-white hover:bg-teal-700 px-8 py-2 rounded font-medium transition"
             >
               Contact Us

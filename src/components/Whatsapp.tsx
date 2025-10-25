@@ -1,46 +1,45 @@
 import { useState, useEffect } from "react";
-import { MessageCircle } from "lucide-react";
 
 const WhatsAppButton = () => {
-  const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+    useEffect(() => {
+        const handleScroll = () => setIsVisible(window.scrollY > 300);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const handleWhatsAppClick = () => {
+        const phoneNumber = "918310853708";
+        const message =
+            "Hello! 👋 I'm interested in Nurse Plus’s home healthcare services. Could you please help me book an appointment or share more details?";
+        const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+        window.open(whatsappLink, "_blank");
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const handleWhatsAppClick = () => {
-    const phoneNumber = "918076688419"; 
-    const message = "Hello, how can you help me?";
-    
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
-    window.open(whatsappLink, "_blank");
-  };
-
-  return (
-    <div 
-      className={`fixed bottom-6 right-6 z-50 transition-opacity duration-300 ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
-    >
-      <button
-        onClick={handleWhatsAppClick}
-        className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
-        aria-label="Contact us on WhatsApp"
-      >
-        <MessageCircle size={28} />
-      </button>
-    </div>
-  );
+    return (
+        <div
+            className={`fixed bottom-6 right-6 z-50 transition-opacity duration-300 ${
+                isVisible ? "opacity-100" : "opacity-0"
+            }`}
+        >
+            <button
+                onClick={handleWhatsAppClick}
+                className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110 animate-bounce"
+                aria-label="Chat with us on WhatsApp"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     className="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/>
+                    <path
+                        d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/>
+                </svg>
+            </button>
+        </div>
+    );
 };
 
 export default WhatsAppButton;

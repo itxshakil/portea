@@ -1,13 +1,130 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="en" class="dark">
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portea</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Nurse Plus – Home Healthcare Services in Bangalore</title>
+    <meta name="description" content="Nurse Plus provides professional home healthcare services in Bangalore including doctor consultation, nursing care, physiotherapy, elder care, lab tests, and medical equipment. Book now for quality care at your doorstep." />
+    <meta name="keywords" content="Home healthcare Bangalore, Nurse Plus, Doctor consultation, Nursing care, Physiotherapy, Elder care, Lab tests, Medical equipment" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nurse Plus – Home Healthcare Services in Bangalore" />
+    <meta property="og:description" content="Professional home healthcare services in Bangalore including doctor consultation, nursing care, physiotherapy, elder care, lab tests, and medical equipment." />
+    <meta property="og:url" content="https://yourwebsite.com/" />
+    <meta property="og:image" content="https://yourwebsite.com/logo.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nurse Plus – Home Healthcare Services in Bangalore" />
+    <meta name="twitter:description" content="Professional home healthcare services in Bangalore including doctor consultation, nursing care, physiotherapy, elder care, lab tests, and medical equipment." />
+    <meta name="twitter:image" content="https://yourwebsite.com/logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/logo.png" type="image/svg+xml" />
+
+    <!-- Dark Mode Preference -->
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "MedicalOrganization",
+            "name": "Nurse Plus",
+            "url": "https://yourwebsite.com",
+            "logo": "https://yourwebsite.com/logo.png",
+            "description": "Professional home healthcare services in Bangalore including doctor consultation, nursing care, physiotherapy, elder care, lab tests, and medical equipment.",
+            "sameAs": [
+                "https://www.facebook.com/yourpage",
+                "https://twitter.com/yourprofile",
+                "https://www.linkedin.com/company/yourcompany",
+                "https://www.instagram.com/yourprofile"
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "152",
+                "bestRating": "5",
+                "worstRating": "1"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+918001212323",
+                "contactType": "Customer Service",
+                "areaServed": "IN",
+                "availableLanguage": ["English", "Hindi"]
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "#22, 3rd Floor, Salarpuria Towers-I, Hosur Road",
+                "addressLocality": "Bangalore",
+                "postalCode": "560095",
+                "addressCountry": "IN"
+            },
+            "makesOffer": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Doctor Consultation",
+                        "description": "Connect with qualified doctors online or in-person"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Nursing Care",
+                        "description": "Professional nursing services at your home"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Physiotherapy",
+                        "description": "Rehabilitation programs designed for your recovery"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Elder Care",
+                        "description": "Specialized care services for elderly family members"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Lab Tests",
+                        "description": "Convenient diagnostic services at your doorstep"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Medical Equipment",
+                        "description": "Quality healthcare equipment for rent or purchase"
+                    }
+                }
+            ]
+        }
+    </script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200 transition-colors duration-300">
+<div id="root"></div>
+<script type="module" src="/src/main.tsx"></script>
+</body>
 </html>

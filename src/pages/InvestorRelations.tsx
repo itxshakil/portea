@@ -15,7 +15,7 @@ export default function InvestorRelationsPage() {
                 <span className="block text-teal-600 mt-2">Building the Future of Healthcare</span>
               </h1>
               <p className="text-gray-600 text-lg">
-                Portea Medical is transforming healthcare delivery in India through innovative home healthcare
+                Nurse Plus Medical is transforming healthcare delivery in India through innovative home healthcare
                 solutions. Learn about our growth story and investment opportunities.
               </p>
             </div>
@@ -34,7 +34,7 @@ export default function InvestorRelationsPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Financial Highlights</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Key financial metrics showcasing Portea's growth and performance
+              Key financial metrics showcasing Nurse Plus's growth and performance
             </p>
           </div>
 
@@ -61,7 +61,7 @@ export default function InvestorRelationsPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Growth Strategy</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Portea's strategic initiatives to drive sustainable growth and market leadership
+              Nurse Plus's strategic initiatives to drive sustainable growth and market leadership
             </p>
           </div>
 
@@ -172,20 +172,20 @@ export default function InvestorRelationsPage() {
                 <div>
                   <h3 className="text-xl font-semibold mb-4 text-teal-600">Investor Relations Contact</h3>
                   <p className="mb-2">
-                    <strong>Email:</strong> investors@portea.com
+                    <strong>Email:</strong> investors@nurse plus.com
                   </p>
                   <p className="mb-2">
                     <strong>Phone:</strong> +91 80 4200 2345
                   </p>
                   <p>
-                    <strong>Address:</strong> Portea Medical, #22, 3rd Floor, Salarpuria Towers-I, Hosur Road, Bangalore
+                    <strong>Address:</strong> Nurse Plus Medical, #22, 3rd Floor, Salarpuria Towers-I, Hosur Road, Bangalore
                     - 560095
                   </p>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-4 text-teal-600">Media Relations</h3>
                   <p className="mb-2">
-                    <strong>Email:</strong> media@portea.com
+                    <strong>Email:</strong> media@nurse plus.com
                   </p>
                   <p className="mb-2">
                     <strong>Phone:</strong> +91 80 4200 2346
