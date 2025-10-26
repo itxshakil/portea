@@ -1,6 +1,17 @@
 import React from "react";
+import {usePageMeta} from "../hooks/usePageMeta.ts";
 
 const PrivacyPage: React.FC = () => {
+    usePageMeta({
+        title: "Privacy Policy – Nurse Plus Bangalore",
+        description:
+            "Understand how Nurse Plus protects your privacy and personal information while using our home healthcare services in Bangalore.",
+        keywords:
+            "Nurse Plus privacy policy, Home healthcare Bangalore, Data protection, Personal information, Security",
+        image: "https://yourwebsite.com/privacy-banner.png",
+        url: "https://yourwebsite.com/privacy-policy",
+    });
+
     return (
         <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
             {/* Hero Section */}

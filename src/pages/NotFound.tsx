@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
+import {usePageMeta} from "../hooks/usePageMeta.ts";
 
 const NotFound = () => {
+    usePageMeta({
+        title: "404 - Page Not Found | Nurse Plus Bangalore",
+        description:
+            "Oops! The page you are looking for does not exist. Navigate back to the home page to explore Nurse Plus home healthcare services in Bangalore.",
+        keywords:
+            "404 page, Page not found, Nurse Plus, Home healthcare Bangalore, Doctor consultation, Nursing, Physiotherapy, Elder care, Lab tests, Medical equipment",
+        image: "https://yourwebsite.com/404-banner.png",
+        url: window.location.href,
+    });
+
     return (
         <section className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300 min-h-screen flex items-center">
             <div className="container mx-auto px-4">

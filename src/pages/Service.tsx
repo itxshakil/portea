@@ -4,6 +4,7 @@ import Baby from "../assets/baby.png";
 import CriticalCare from "../assets/critical-care.png";
 import MedicalEquipment from "../assets/medical-equipment.png";
 import NursingCare from "../assets/Nursing.png";
+import {usePageMeta} from "../hooks/usePageMeta.ts";
 
 interface Service {
     id: number;
@@ -66,6 +67,17 @@ const CardContent = ({ className, children }: { className?: string; children: Re
 };
 
 const Services = () => {
+
+    usePageMeta({
+        title: "Our Healthcare Services – Nurse Plus Bangalore",
+        description:
+            "Explore Nurse Plus’ wide range of home healthcare services in Bangalore, including doctor consultations, nursing, physiotherapy, elder care, and lab tests.",
+        keywords:
+            "Home healthcare Bangalore, Nurse Plus services, Doctor consultation, Nursing, Physiotherapy, Elder care, Lab tests",
+        image: "https://yourwebsite.com/services-banner.png",
+        url: "https://yourwebsite.com/services",
+    });
+
     return (
         <section className="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
             <div className="container px-4 md:px-6 mx-auto">

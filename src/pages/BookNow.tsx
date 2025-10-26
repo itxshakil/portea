@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import BookAppointment from "../components/BookAppointment";
+import {usePageMeta} from "../hooks/usePageMeta.ts";
 
 export const metadata = {
     title: "Book Home Healthcare Services in Bangalore | Nurse Plus",
@@ -8,6 +9,16 @@ export const metadata = {
 };
 
 export default function BookNowPage() {
+    usePageMeta({
+        title: "Book Home Healthcare Service – Nurse Plus Bangalore",
+        description:
+            "Schedule your home healthcare service with Nurse Plus. Choose doctor consultations, nursing, physiotherapy, elder care, and lab tests at your convenience.",
+        keywords:
+            "Book healthcare Bangalore, Nurse Plus appointment, Doctor consultation, Nursing, Physiotherapy, Elder care, Lab tests",
+        image: "https://yourwebsite.com/book-now-banner.png",
+        url: "https://yourwebsite.com/book-now",
+    });
+
     return (
         <section className="min-h-screen py-16 bg-gradient-to-br from-slate-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
             <div className="container mx-auto px-4 md:px-6">

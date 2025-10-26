@@ -6,6 +6,7 @@ import Physiotherapy from "../assets/physiotherapy.avif"
 import Baby from "../assets/baby.png"
 import CriticalCare from "../assets/critical-care.png"
 import MedicalEquipment from "../assets/medical-equipment.png"
+import {usePageMeta} from "../hooks/usePageMeta.ts";
 
 interface FAQ {
   question: string;
@@ -284,6 +285,14 @@ export default function ServicePage() {
     useEffect(() => {
         document.title = `${serviceData.title} - Nurse Plus Bangalore`;
     }, [serviceData.title]);
+
+    usePageMeta({
+        title: `${serviceData.title} - Nurse Plus Bangalore`,
+        description: serviceData.description,
+        keywords: `${serviceData.title}, Home healthcare Bangalore, Nurse Plus, Doctor consultation, Nursing care, Physiotherapy, Elder care, Lab tests, Medical equipment`,
+        image: serviceData.image ? window.location.origin + serviceData.image : 'https://yourwebsite.com/logo.png',
+        url: window.location.href,
+    });
 
     return (
         <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200 transition-colors duration-300">

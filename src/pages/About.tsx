@@ -2,8 +2,19 @@ import React from "react";
 import About from "../assets/about.png";
 import Journey from "../assets/Journey.png";
 import SurenderImage from "../assets/surender.avif";
+import {usePageMeta} from "../hooks/usePageMeta.ts";
 
 const AboutPage: React.FC = () => {
+    usePageMeta({
+        title: "About Nurse Plus – Trusted Home Healthcare in Bangalore",
+        description:
+            "Learn about Nurse Plus, Bangalore's trusted home healthcare provider. Our mission: compassionate care, professional medical services, and wellness at home.",
+        keywords:
+            "Nurse Plus, Home healthcare Bangalore, About us, Doctor consultation, Nursing, Physiotherapy, Elder care",
+        image: "https://yourwebsite.com/about-banner.png",
+        url: "https://yourwebsite.com/about",
+    });
+
     return (
         <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
             {/* Hero Section */}

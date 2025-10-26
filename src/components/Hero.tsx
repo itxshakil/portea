@@ -5,10 +5,20 @@ import Testimonials from "./Testimonials";
 import BookAppointment from "./BookAppointment";
 import FAQSection from "./FAQ";
 import Nurse from "../assets/nurse.png";
-import WhatsAppButton from "./Whatsapp";
 import {PhoneIcon} from "lucide-react";
+import {usePageMeta} from "../hooks/usePageMeta.ts";
 
 export default function Hero() {
+    usePageMeta({
+        title: "Nurse Plus – Home Healthcare Services in Bangalore",
+        description:
+            "Nurse Plus provides trusted home healthcare in Bangalore — doctor consultations, nursing, physiotherapy, elder care, lab tests, and medical equipment at your doorstep.",
+        keywords:
+            "Home healthcare Bangalore, Nurse Plus, Doctor consultation, Nursing care, Physiotherapy, Elder care, Lab tests, Medical equipment",
+        image: "https://yourwebsite.com/logo.png",
+        url: "https://yourwebsite.com/",
+    });
+
     return (
         <section className="relative bg-white dark:bg-gray-900 py-12 md:py-20 overflow-hidden transition-colors duration-300">
             <div className="container px-4 md:px-6 mx-auto">

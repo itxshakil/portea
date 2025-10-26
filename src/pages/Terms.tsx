@@ -1,6 +1,17 @@
 import React from "react";
+import {usePageMeta} from "../hooks/usePageMeta.ts";
 
 const TermsPage: React.FC = () => {
+    usePageMeta({
+        title: "Terms and Conditions – Nurse Plus Bangalore",
+        description:
+            "Read the terms and conditions of using Nurse Plus home healthcare services in Bangalore, including appointments, payments, and service policies.",
+        keywords:
+            "Nurse Plus terms, Home healthcare Bangalore, Terms and conditions, Service policies, Appointments, Payments",
+        image: "https://yourwebsite.com/terms-banner.png",
+        url: "https://yourwebsite.com/terms-conditions",
+    });
+
     return (
         <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
             {/* Hero Section */}
