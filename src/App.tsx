@@ -11,10 +11,12 @@ import NotFound from "./pages/NotFound"
 import WhatsAppButton from "./components/Whatsapp.tsx";
 import Terms from "./pages/Terms.tsx";
 import Privacy from "./pages/Privacy.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 
 function App() {
   return (
     <Router>
+        <ScrollToTop/>
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">

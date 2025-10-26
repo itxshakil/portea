@@ -225,6 +225,13 @@ export default function Header() {
                                 </div>
                                 <Phone className="w-5 h-5 text-teal-600" />
                             </a>
+                            <a href="tel:+916006393917" className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-100 dark:border-gray-700 flex items-center justify-between mb-4">
+                                <div className="flex items-center gap-2">
+                                    <img src={IndiaFlag} alt="India Flag" width={24} height={16} className="h-4 w-auto" />
+                                    <span className="text-sm font-medium text-gray-800 dark:text-gray-200">6006393917</span>
+                                </div>
+                                <Phone className="w-5 h-5 text-teal-600" />
+                            </a>
                         </div>
                     </nav>
 

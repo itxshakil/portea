@@ -1,9 +1,9 @@
 import type React from "react";
-import TrainedAttendants from "../assets/trained-attendants.avif";
-import Baby from "../assets/baby.avif";
-import CriticalCare from "../assets/critical-care.avif";
-import MedicalEquipment from "../assets/medical-equipment.avif";
-import NursingCare from "../assets/Nursing.avif";
+import TrainedAttendants from "../assets/trained-attendants.png";
+import Baby from "../assets/baby.png";
+import CriticalCare from "../assets/critical-care.png";
+import MedicalEquipment from "../assets/medical-equipment.png";
+import NursingCare from "../assets/Nursing.png";
 
 interface Service {
     id: number;
@@ -16,17 +16,17 @@ interface Service {
 const services: Service[] = [
     {
         id: 1,
-        title: "Doctor Consultation",
-        description: "Consult with experienced doctors in the comfort of your home in Bangalore",
-        icon: TrainedAttendants,
-        link: "/services/doctor-consultation",
-    },
-    {
-        id: 2,
         title: "Nursing Care",
         description: "Professional nursing services at home for patients in Bangalore",
         icon: NursingCare,
         link: "/services/nursing-care",
+    },
+    {
+        id: 2,
+        title: "Doctor Consultation",
+        description: "Consult with experienced doctors in the comfort of your home in Bangalore",
+        icon: TrainedAttendants,
+        link: "/services/doctor-consultation",
     },
     {
         id: 3,

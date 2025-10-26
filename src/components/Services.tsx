@@ -1,9 +1,9 @@
 import { useState } from "react";
-import TrainedAttendants from "../assets/trained-attendants.avif";
+import TrainedAttendants from "../assets/trained-attendants.png";
 import NursingCare from "../assets/Nursing.avif";
-import Baby from "../assets/baby.avif";
-import CriticalCare from "../assets/critical-care.avif";
-import MedicalEquipment from "../assets/medical-equipment.avif";
+import Baby from "../assets/baby.png";
+import CriticalCare from "../assets/critical-care.png";
+import MedicalEquipment from "../assets/medical-equipment.png";
 
 interface Service {
     id: number;

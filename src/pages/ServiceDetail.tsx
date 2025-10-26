@@ -1,11 +1,11 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import TrainedAttendants from "../assets/trained-attendants.avif"
-import NursingCare from "../assets/Nursing.avif"
+import TrainedAttendants from "../assets/trained-attendants.png"
+import NursingCare from "../assets/Nursing.png"
 import Physiotherapy from "../assets/physiotherapy.avif"
-import Baby from "../assets/baby.avif"
-import CriticalCare from "../assets/critical-care.avif"
-import MedicalEquipment from "../assets/medical-equipment.avif"
+import Baby from "../assets/baby.png"
+import CriticalCare from "../assets/critical-care.png"
+import MedicalEquipment from "../assets/medical-equipment.png"
 
 interface FAQ {
   question: string;
@@ -302,7 +302,7 @@ export default function ServicePage() {
                             </Button>
                         </div>
                         <div className="relative">
-                            <div className="relative h-[300px] md:h-[400px] w-full rounded-lg overflow-hidden">
+                            <div className="relative h-[400px] md:h-[400px] w-full rounded-lg overflow-hidden">
                                 <img
                                     src={serviceData.image || "/placeholder.svg"}
                                     alt={serviceData.title}

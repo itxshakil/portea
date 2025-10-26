@@ -84,7 +84,7 @@ const Testimonials = () => {
                     >
                         <Quote className="h-10 w-10 text-teal-500 opacity-20 mb-6" />
                         <p className="text-gray-700 dark:text-gray-200 text-lg italic mb-8">
-                            "{testimonials[activeIndex].testimonial}"
+                            {testimonials[activeIndex].testimonial}
                         </p>
                         <div className="flex items-center gap-4">
                             <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-teal-500">
