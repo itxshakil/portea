@@ -36,9 +36,8 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold mb-4 text-gray-100 dark:text-gray-200">Our Services</h3>
                         <ul className="space-y-2">
                             {[
-                                ["Doctor Consultation", "/services/doctor-consultation"],
                                 ["Nursing Care", "/services/nursing-care"],
-                                ["Physiotherapy", "/services/physiotherapy"],
+                                ["Doctor Consultation", "/services/doctor-consultation"],
                                 ["Elder Care", "/services/elder-care"],
                                 ["Lab Tests", "/services/lab-tests"],
                                 ["Medical Equipment", "/services/medical-equipment"],

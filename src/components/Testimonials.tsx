@@ -13,26 +13,36 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
     {
         id: 1,
-        name: "Rajesh Kumar",
+        name: "Santosh Narayana",
         location: "Indiranagar, Bangalore",
         testimonial:
-            "The physiotherapy services from Nurse Plus have been excellent. The therapist was professional and helped me recover from my knee surgery much faster than expected.",
+            "Firstly Thank you, It was an emergency situation, and the technicians promptly arrived between 11–12 AM with a very positive attitude. They carried out the work with great professionalism, which left me completely satisfied and relieved. I truly appreciate their timely support during such a critical moment. Many thanks to the team—I would gladly recommend them for any emergency needs",
         image: avatar,
     },
     {
         id: 2,
-        name: "Priya Sharma",
+        name: "Basavraj K",
         location: "Koramangala, Bangalore",
         testimonial:
-            "I've been using Nurse Plus's nursing services for my elderly mother. The nurses are well-trained, compassionate, and punctual. Highly recommended for home healthcare in Bangalore.",
+            "Good service from the agency.\n" +
+            "Nurse will arrive on time.\n" +
+            "Very professional, polite and skilled.\n" +
+            "Charges very less as compared to others\n" +
+            "We have taken injection service for my mother 3 times a day. I can't thank them enough for their great service.\n" +
+            "Anyone looking for home nursing services should definitely call them.\n" +
+            "Recommended to everyone.",
         image: avatar,
     },
     {
         id: 3,
-        name: "Suresh Menon",
+        name: "Madesh C",
         location: "Whitefield, Bangalore",
         testimonial:
-            "The doctor consultation service was very convenient. The doctor was knowledgeable and took time to explain everything. The follow-up was also excellent.",
+            "Excellent service, arranged doctor at home consultation in just 30 minutes.\n" +
+            "Got drips also done from them for my father.\n" +
+            "Very polite and professional staff.\n" +
+            "Highly recommended.\n" +
+            "Thankyou for the service",
         image: avatar,
     },
 ];

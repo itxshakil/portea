@@ -139,7 +139,7 @@ const AboutPage: React.FC = () => {
                                     <img src={SurenderImage} alt={`Team Member ${member}`} className="object-cover w-full h-full" />
                                 </div>
                                 <div className="p-6">
-                                    <h3 className="text-xl font-semibold mb-1 text-gray-900 dark:text-white">Dr. Anil Kumar</h3>
+                                    <h3 className="text-xl font-semibold mb-1 text-gray-900 dark:text-white">Chandan Mandal</h3>
                                     <p className="text-teal-600 mb-4">Chief Medical Officer</p>
                                     <p className="text-gray-600 dark:text-gray-300">
                                         With over 15 years of experience in healthcare management, Dr. Kumar leads our medical team in

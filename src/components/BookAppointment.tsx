@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Calendar, CheckCircle2 } from "lucide-react";
 
 const services = [
-    "Doctor Consultation",
     "Nursing Care",
-    "Physiotherapy",
+    "Doctor Consultation",
     "Elder Care",
     "Lab Tests",
     "Medical Equipment",

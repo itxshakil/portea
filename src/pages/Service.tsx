@@ -1,6 +1,5 @@
 import type React from "react";
 import TrainedAttendants from "../assets/trained-attendants.avif";
-import Physiotherapy from "../assets/physiotherapy.avif";
 import Baby from "../assets/baby.avif";
 import CriticalCare from "../assets/critical-care.avif";
 import MedicalEquipment from "../assets/medical-equipment.avif";
@@ -31,27 +30,20 @@ const services: Service[] = [
     },
     {
         id: 3,
-        title: "Physiotherapy",
-        description: "Expert physiotherapy sessions at your home in Bangalore",
-        icon: Physiotherapy,
-        link: "/services/physiotherapy",
-    },
-    {
-        id: 4,
         title: "Elder Care",
         description: "Specialized care services for elderly patients in Bangalore",
         icon: Baby,
         link: "/services/elder-care",
     },
     {
-        id: 5,
+        id: 4,
         title: "Lab Tests",
         description: "Convenient lab sample collection from your home in Bangalore",
         icon: CriticalCare,
         link: "/services/lab-tests",
     },
     {
-        id: 6,
+        id: 5,
         title: "Medical Equipment",
         description: "Rent or purchase medical equipment delivered to your home in Bangalore",
         icon: MedicalEquipment,

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import TrainedAttendants from "../assets/trained-attendants.avif";
 import NursingCare from "../assets/Nursing.avif";
-import Physiotherapy from "../assets/physiotherapy.avif";
 import Baby from "../assets/baby.avif";
 import CriticalCare from "../assets/critical-care.avif";
 import MedicalEquipment from "../assets/medical-equipment.avif";
@@ -17,24 +16,17 @@ interface Service {
 const services: Service[] = [
     {
         id: 1,
-        title: "Doctor Consultation",
-        description: "Consult with experienced doctors in the comfort of your home in Bangalore",
-        icon: TrainedAttendants,
-        link: "/services/doctor-consultation",
-    },
-    {
-        id: 2,
         title: "Nursing Care",
         description: "Professional nursing services at home for patients in Bangalore",
         icon: NursingCare,
         link: "/services/nursing-care",
     },
     {
-        id: 3,
-        title: "Physiotherapy",
-        description: "Expert physiotherapy sessions at your home in Bangalore",
-        icon: Physiotherapy,
-        link: "/services/physiotherapy",
+        id: 2,
+        title: "Doctor Consultation",
+        description: "Consult with experienced doctors in the comfort of your home in Bangalore",
+        icon: TrainedAttendants,
+        link: "/services/doctor-consultation",
     },
     {
         id: 4,
@@ -103,7 +95,7 @@ const Services = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 items-center">
                     {displayedServices.map((service) => (
                         <ServiceCard key={service.id} service={service} />
                     ))}

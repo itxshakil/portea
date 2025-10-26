@@ -5,9 +5,8 @@ import IndiaFlag from "../assets/ind.png"
 import {Link} from "react-router-dom";
 
 const services = [
-    { name: "Doctor Consultation", href: "/services/doctor-consultation", description: "Connect with qualified doctors online or in-person" },
     { name: "Nursing Care", href: "/services/nursing-care", description: "Professional nursing services at your home" },
-    { name: "Physiotherapy", href: "/services/physiotherapy", description: "Rehabilitation programs designed for your recovery" },
+    { name: "Doctor Consultation", href: "/services/doctor-consultation", description: "Connect with qualified doctors online or in-person" },
     { name: "Elder Care", href: "/services/elder-care", description: "Specialized care services for elderly family members" },
     { name: "Lab Tests", href: "/services/lab-tests", description: "Convenient diagnostic services at your doorstep" },
     { name: "Medical Equipment", href: "/services/medical-equipment", description: "Quality healthcare equipment for rent or purchase" },
