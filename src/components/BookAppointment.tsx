@@ -131,16 +131,31 @@ export default function BookAppointment() {
                             error={errors.email}
                             helpText="We will send your booking details here."
                         />
-                        <SelectField
-                            id="area"
-                            label="Area in Bangalore"
-                            value={formData.area}
-                            onChange={handleChange}
-                            options={bangaloreAreas}
-                            placeholder="Select your area"
-                            error={errors.area}
-                            helpText="Select the area where you want home service."
-                        />
+                        <div>
+                            <label htmlFor="area" className="block text-sm font-medium mb-2">
+                                Area in Bangalore
+                            </label>
+                            <input
+                                list="areaSuggestions"
+                                id="area"
+                                value={formData.area}
+                                onChange={handleChange}
+                                placeholder="Type or select your area"
+                                className={`w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-teal-300 focus:border-teal-500 outline-none transition-all bg-white border-gray-300 text-gray-900 placeholder-gray-500 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-200 dark:placeholder-gray-400 ${
+                                    errors.area ? "border-red-500 animate-shake" : ""
+                                }`}
+                            />
+                            <datalist id="areaSuggestions">
+                                {bangaloreAreas.map((area) => (
+                                    <option key={area} value={area} />
+                                ))}
+                            </datalist>
+                            <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
+                                Start typing to see suggestions.
+                            </p>
+                            {errors.area && <p className="text-red-500 text-sm mt-1">{errors.area}</p>}
+                        </div>
+
                         <SelectField
                             id="service"
                             label="Service Required"

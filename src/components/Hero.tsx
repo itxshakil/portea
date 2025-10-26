@@ -19,7 +19,7 @@ export default function Hero() {
                             <span className="text-teal-600 dark:text-teal-300">Comfort of Your Home</span>
                         </h1>
                         <p className="text-gray-600 dark:text-gray-300 text-lg max-w-md">
-                            Nurse Plus brings trusted medical professionals right to your doorstep in Bangalore. Get quality, affordable, and compassionate healthcare—anytime you need it.
+                            Nurse Plus brings trusted medical professionals right to your doorstep in Bangalore. <span className="font-semibold text-teal-600 dark:text-teal-400"> Day or night,</span>  Get quality, affordable, and compassionate healthcare—anytime you need it.
                         </p>
 
                         {/* CTA Buttons */}

@@ -187,7 +187,7 @@ const services: Services = {
       {
         question: "How soon will I get my test results?",
         answer:
-          "Most routine test results are available within 24-48 hours. Some specialized tests may take longer. The exact timeframe will be communicated during booking.",
+          "Most routine test results are available within 6-8 hours. Some specialized tests may take longer. The exact timeframe will be communicated during booking.",
       },
       {
         question: "Do I need to prepare for blood tests?",

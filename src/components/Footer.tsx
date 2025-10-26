@@ -79,24 +79,57 @@ export default function Footer() {
 
                     {/* Contact */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4 text-gray-100 dark:text-gray-200">Contact Us</h3>
+                        <h3 className="text-lg font-semibold mb-4 text-gray-100 dark:text-gray-200">
+                            Contact Us
+                        </h3>
                         <ul className="space-y-4">
-                            <li className="flex items-start gap-3">
-                                <MapPin className="h-5 w-5 text-teal-500 flex-shrink-0 mt-0.5" />
-                                <span className="text-gray-400 dark:text-gray-300">
-                  Nurse Plus Medical, #22, 3rd Floor, Salarpuria Towers-I, Hosur Road, Bangalore - 560095
-                </span>
+                            <li>
+                                <a
+                                    href="https://maps.app.goo.gl/2xYVLBsvsNDsSBPX6?utm_source=website"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-start gap-3"
+                                >
+                                    <MapPin className="h-5 w-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                                    <span className="text-gray-400 dark:text-gray-300">
+                                      1st Floor, 812, Opposite Mahadeshwara Temple, 13th Cross, 16th Main Rd,
+                                      BTM 2nd Stage, Bengaluru, Karnataka 560076
+                                    </span>
+                                </a>
                             </li>
+
                             <li className="flex items-center gap-3">
                                 <Phone className="h-5 w-5 text-teal-500 flex-shrink-0" />
-                                <span className="text-gray-400 dark:text-gray-300">+918310853708</span>
+                                <a
+                                    href="tel:+918310853708"
+                                    className="text-gray-400 dark:text-gray-300 hover:text-teal-400 transition-colors"
+                                >
+                                    +91 83108 53708
+                                </a>
                             </li>
+
+                            <li className="flex items-center gap-3">
+                                <Phone className="h-5 w-5 text-teal-500 flex-shrink-0" />
+                                <a
+                                    href="tel:+916006393917"
+                                    className="text-gray-400 dark:text-gray-300 hover:text-teal-400 transition-colors"
+                                >
+                                    +91 60063 93917
+                                </a>
+                            </li>
+
                             <li className="flex items-center gap-3">
                                 <Mail className="h-5 w-5 text-teal-500 flex-shrink-0" />
-                                <span className="text-gray-400 dark:text-gray-300">info@nurse plus.com</span>
+                                <a
+                                    href="mailto:info@nurseplus.com"
+                                    className="text-gray-400 dark:text-gray-300 hover:text-teal-400 transition-colors"
+                                >
+                                    info@nurseplus.com
+                                </a>
                             </li>
                         </ul>
                     </div>
+
                 </div>
 
                 <div className="border-t border-gray-800 dark:border-gray-700 mt-12 pt-8 text-center text-gray-400 dark:text-gray-300 text-sm">
