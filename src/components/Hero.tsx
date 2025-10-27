@@ -10,13 +10,13 @@ import {usePageMeta} from "../hooks/usePageMeta.ts";
 
 export default function Hero() {
     usePageMeta({
-        title: "Nurse Plus – Home Healthcare Services in Bangalore",
+        title: "Nurse for Injection at home - in 30 min across Bangalore | Nurse Plus",
         description:
             "Nurse Plus provides trusted home healthcare in Bangalore — doctor consultations, nursing, physiotherapy, elder care, lab tests, and medical equipment at your doorstep.",
         keywords:
             "Home healthcare Bangalore, Nurse Plus, Doctor consultation, Nursing care, Physiotherapy, Elder care, Lab tests, Medical equipment",
-        image: "https://yourwebsite.com/logo.png",
-        url: "https://yourwebsite.com/",
+        image: "https://nurseplus.shakiltech.com/logo.png",
+        url: "https://nurseplus.shakiltech.com/",
     });
 
     return (

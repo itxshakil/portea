@@ -63,7 +63,7 @@ const WhyChooseUs = () => {
                             />
                         </div>
                         <div className="absolute -bottom-6 -right-6 bg-teal-600 text-white p-6 rounded-lg shadow-lg max-w-[200px]">
-                            <p className="text-2xl font-bold">10+ Years</p>
+                            <p className="text-2xl font-bold">3+ Years</p>
                             <p>of excellence in home healthcare in Bangalore</p>
                         </div>
                     </div>

@@ -290,7 +290,7 @@ export default function ServicePage() {
         title: `${serviceData.title} - Nurse Plus Bangalore`,
         description: serviceData.description,
         keywords: `${serviceData.title}, Home healthcare Bangalore, Nurse Plus, Doctor consultation, Nursing care, Physiotherapy, Elder care, Lab tests, Medical equipment`,
-        image: serviceData.image ? window.location.origin + serviceData.image : 'https://yourwebsite.com/logo.png',
+        image: serviceData.image ? window.location.origin + serviceData.image : 'https://nurseplus.shakiltech.com/logo.png',
         url: window.location.href,
     });
 

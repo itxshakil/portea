@@ -11,8 +11,8 @@ const AboutPage: React.FC = () => {
             "Learn about Nurse Plus, Bangalore's trusted home healthcare provider. Our mission: compassionate care, professional medical services, and wellness at home.",
         keywords:
             "Nurse Plus, Home healthcare Bangalore, About us, Doctor consultation, Nursing, Physiotherapy, Elder care",
-        image: "https://yourwebsite.com/about-banner.png",
-        url: "https://yourwebsite.com/about",
+        image: "https://nurseplus.shakiltech.com/about-banner.png",
+        url: "https://nurseplus.shakiltech.com/about",
     });
 
     return (
@@ -59,7 +59,7 @@ const AboutPage: React.FC = () => {
                         </div>
                         <div className="space-y-6 text-gray-600 dark:text-gray-300">
                             <p>
-                                Nurse Plus was established in 2013 with the goal of addressing the growing need for quality healthcare
+                                Nurse Plus was established in 2022 with the goal of addressing the growing need for quality healthcare
                                 services outside of hospital settings...
                             </p>
                             <p>
@@ -129,36 +129,6 @@ const AboutPage: React.FC = () => {
                                 ))}
                             </ul>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Our Team */}
-            <section className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
-                <div className="container px-4 md:px-6 mx-auto">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Our Leadership Team</h2>
-                        <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                            Meet the experienced professionals leading Nurse Plus's mission to transform healthcare delivery in Bangalore
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[1, 2, 3].map((member) => (
-                            <div key={member} className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden">
-                                <div className="relative h-64 w-full">
-                                    <img src={SurenderImage} alt={`Team Member ${member}`} className="object-cover w-full h-full" />
-                                </div>
-                                <div className="p-6">
-                                    <h3 className="text-xl font-semibold mb-1 text-gray-900 dark:text-white">Chandan Mandal</h3>
-                                    <p className="text-teal-600 mb-4">Chief Medical Officer</p>
-                                    <p className="text-gray-600 dark:text-gray-300">
-                                        With over 15 years of experience in healthcare management, Dr. Kumar leads our medical team in
-                                        Bangalore...
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
                     </div>
                 </div>
             </section>

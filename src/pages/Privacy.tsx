@@ -8,8 +8,8 @@ const PrivacyPage: React.FC = () => {
             "Understand how Nurse Plus protects your privacy and personal information while using our home healthcare services in Bangalore.",
         keywords:
             "Nurse Plus privacy policy, Home healthcare Bangalore, Data protection, Personal information, Security",
-        image: "https://yourwebsite.com/privacy-banner.png",
-        url: "https://yourwebsite.com/privacy-policy",
+        image: "https://nurseplus.shakiltech.com/privacy-banner.png",
+        url: "https://nurseplus.shakiltech.com/privacy-policy",
     });
 
     return (

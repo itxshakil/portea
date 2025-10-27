@@ -36,22 +36,22 @@ const packages: Package[] = [
         ],
         popular: true,
     },
-    {
-        id: 3,
-        name: "Senior Citizen Package",
-        price: "₹4,999",
-        description: "Specialized health package for elderly patients",
-        features: [
-            "All Comprehensive Package Tests",
-            "Bone Density Test",
-            "Pulmonary Function Test",
-            "Cardiac Risk Assessment",
-            "Prostate Specific Antigen (for men)",
-            "Mammography (for women)",
-            "Two Doctor Consultations",
-        ],
-        popular: false,
-    },
+    // {
+    //     id: 3,
+    //     name: "Senior Citizen Package",
+    //     price: "₹4,999",
+    //     description: "Specialized health package for elderly patients",
+    //     features: [
+    //         "All Comprehensive Package Tests",
+    //         "Bone Density Test",
+    //         "Pulmonary Function Test",
+    //         "Cardiac Risk Assessment",
+    //         "Prostate Specific Antigen (for men)",
+    //         "Mammography (for women)",
+    //         "Two Doctor Consultations",
+    //     ],
+    //     popular: false,
+    // },
 ]
 
 export default function HealthcarePackages() {
