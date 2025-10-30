@@ -1,11 +1,11 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import TrainedAttendants from "../assets/trained-attendants.png"
-import NursingCare from "../assets/Nursing.png"
+import TrainedAttendants from "../assets/trained-attendants.jpg"
+import NursingCare from "../assets/nursing.jpg"
 import Physiotherapy from "../assets/physiotherapy.avif"
 import Baby from "../assets/baby.png"
-import CriticalCare from "../assets/critical-care.png"
-import MedicalEquipment from "../assets/medical-equipment.png"
+import CriticalCare from "../assets/critical-care.jpg"
+import MedicalEquipment from "../assets/medical-equipment.jpg"
 import {usePageMeta} from "../hooks/usePageMeta.ts";
 
 interface FAQ {
@@ -290,7 +290,6 @@ export default function ServicePage() {
         title: `${serviceData.title} - Nurse Plus Bangalore`,
         description: serviceData.description,
         keywords: `${serviceData.title}, Home healthcare Bangalore, Nurse Plus, Doctor consultation, Nursing care, Physiotherapy, Elder care, Lab tests, Medical equipment`,
-        image: serviceData.image ? window.location.origin + serviceData.image : 'https://nurseplus.shakiltech.com/logo.png',
         url: window.location.href,
     });
 

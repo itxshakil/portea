@@ -59,23 +59,38 @@ export default function BookAppointment() {
         return newErrors;
     };
 
-    const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLButtonElement>) => {
         e.preventDefault();
         const validationErrors = validate();
         if (Object.keys(validationErrors).length > 0) {
             setErrors(validationErrors);
             return;
         }
-        setLoading(true);
 
-        setTimeout(() => {
+        setLoading(true);
+        try {
+            const response = await fetch("https://nurseplus.in/send-booking.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ ...formData, date }),
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                setSuccess(true);
+                setFormData({ name: "", phone: "", email: "", area: "", service: "", message: "" });
+                setDate("");
+            } else {
+                setErrors(result.errors || {});
+            }
+        } catch (error) {
+            console.error(error);
+            alert("Something went wrong. Please try again.");
+        } finally {
             setLoading(false);
-            setSuccess(true);
-            setFormData({ name: "", phone: "", email: "", area: "", service: "", message: "" });
-            setDate("");
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        }, 1500);
+        }
     };
+
 
     return (
         <div className="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-200 md:p-6 transition-colors duration-300">

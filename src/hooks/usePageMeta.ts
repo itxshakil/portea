@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Logo from "../assets/logo.png"
 
 interface MetaOptions {
     title?: string;
@@ -18,6 +19,9 @@ export function usePageMeta({
     useEffect(() => {
         // --- Title ---
         if (title) document.title = title;
+        if(!image) {
+            image = Logo;
+        }
 
         // Helper to set or update meta tag
         const setMeta = (attr: "name" | "property", key: string, value?: string) => {
@@ -37,6 +41,11 @@ export function usePageMeta({
         // --- Standard meta ---
         setMeta("name", "description", description);
         setMeta("name", "keywords", keywords);
+        setMeta("name", "subject", title);
+        setMeta("name", "url", url);
+        setMeta("name", "identifier-URL", url);
+        setMeta("name", "apple-mobile-web-app-title", title);
+        setMeta("name", "twitter:image:alt", title);
 
         // --- Open Graph meta ---
         setMeta("property", "og:title", title);

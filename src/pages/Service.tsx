@@ -1,9 +1,9 @@
 import type React from "react";
-import TrainedAttendants from "../assets/trained-attendants.png";
+import TrainedAttendants from "../assets/trained-attendants.jpg";
 import Baby from "../assets/baby.png";
-import CriticalCare from "../assets/critical-care.png";
-import MedicalEquipment from "../assets/medical-equipment.png";
-import NursingCare from "../assets/Nursing.png";
+import CriticalCare from "../assets/critical-care.jpg";
+import MedicalEquipment from "../assets/medical-equipment.jpg";
+import NursingCare from "../assets/nursing.jpg";
 import {usePageMeta} from "../hooks/usePageMeta.ts";
 
 interface Service {
@@ -74,7 +74,6 @@ const Services = () => {
             "Explore Nurse Plus’ wide range of home healthcare services in Bangalore, including doctor consultations, nursing, physiotherapy, elder care, and lab tests.",
         keywords:
             "Home healthcare Bangalore, Nurse Plus services, Doctor consultation, Nursing, Physiotherapy, Elder care, Lab tests",
-        image: "https://nurseplus.shakiltech.com/services-banner.png",
         url: "https://nurseplus.shakiltech.com/services",
     });
 

@@ -25,6 +25,26 @@
     <meta name="twitter:image" content="https://nurseplus.shakiltech.com/assets/logo-C5i7ItDT.png" />
     <meta name="twitter:url" content="https://nurseplus.shakiltech.com/" />
 
+    <meta name="language" content="en" />
+    <meta name="rating" content="General" />
+    <link rel="canonical" href="https://shakiltech.com" />
+    <meta name="owner" content="Chandan Mandal" />
+    <meta name="og:phone_number" content="+916006393917" />
+    <meta name="og:country-name" content="India" />
+
+    <meta name="twitter:site" content="@nurseplus">
+
+    <meta name="theme-color" content="#112438" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="#112438" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="/android-chrome-192x192.png" name="msapplication-TitleImage" />
+    <meta content="#112438" name="msapplication-TitleColor" />
+
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon/favicon-16x16.png">
+
     <link rel="icon" href="/assets/logo-C5i7ItDT.png" type="image/png" />
 
     <script type="application/ld+json">
@@ -106,10 +126,33 @@
             ]
         }
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-689HZL51XD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-689HZL51XD');
+    </script>
 </head>
 
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200 transition-colors duration-300">
 <div id="root"></div>
 <script type="module" src="/src/main.tsx"></script>
+
+<script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+            navigator.serviceWorker.register("/sw.js").then(
+                function (registration) {},
+                function (err) {
+                    console.log("ServiceWorker registration failed: ", err);
+                }
+            );
+        });
+    }
+</script>
 </body>
 </html>

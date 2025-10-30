@@ -15,7 +15,6 @@ export default function Hero() {
             "Book certified nurses for injection, wound dressing, IV drip, and post-surgery care at home in Bangalore. Nurse Plus provides 24x7 professional and affordable home nursing services you can trust.",
         keywords:
             "nurse for injection at home, nursing care Bangalore, home nurse Bangalore, wound dressing at home, IV drip at home, home healthcare Bangalore, Nurse Plus",
-        image: "https://nurseplus.shakiltech.com/logo.png",
         url: "https://nurseplus.shakiltech.com/",
     });
 

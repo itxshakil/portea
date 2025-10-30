@@ -1,5 +1,5 @@
 import React from "react";
-import About from "../assets/about.png";
+import About from "../assets/about.jpg";
 import Journey from "../assets/Journey.png";
 import SurenderImage from "../assets/surender.avif";
 import {usePageMeta} from "../hooks/usePageMeta.ts";
@@ -11,7 +11,6 @@ const AboutPage: React.FC = () => {
             "Learn about Nurse Plus, Bangalore's trusted home healthcare provider. Our mission: compassionate care, professional medical services, and wellness at home.",
         keywords:
             "Nurse Plus, Home healthcare Bangalore, About us, Doctor consultation, Nursing, Physiotherapy, Elder care",
-        image: "https://nurseplus.shakiltech.com/about-banner.png",
         url: "https://nurseplus.shakiltech.com/about",
     });
 

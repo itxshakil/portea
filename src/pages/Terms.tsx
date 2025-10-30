@@ -8,7 +8,6 @@ const TermsPage: React.FC = () => {
             "Read the terms and conditions of using Nurse Plus home healthcare services in Bangalore, including appointments, payments, and service policies.",
         keywords:
             "Nurse Plus terms, Home healthcare Bangalore, Terms and conditions, Service policies, Appointments, Payments",
-        image: "https://nurseplus.shakiltech.com/terms-banner.png",
         url: "https://nurseplus.shakiltech.com/terms-conditions",
     });
 
