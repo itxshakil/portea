@@ -74,7 +74,7 @@ const Services = () => {
             "Explore Nurse Plus’ wide range of home healthcare services in Bangalore, including doctor consultations, nursing, physiotherapy, elder care, and lab tests.",
         keywords:
             "Home healthcare Bangalore, Nurse Plus services, Doctor consultation, Nursing, Physiotherapy, Elder care, Lab tests",
-        url: "https://nurseplus.shakiltech.com/services",
+        url: "https://nurseplus.in/services",
     });
 
     return (

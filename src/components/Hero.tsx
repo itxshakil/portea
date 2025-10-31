@@ -10,12 +10,12 @@ import { usePageMeta } from "../hooks/usePageMeta.ts";
 
 export default function Hero() {
     usePageMeta({
-        title: "Nursing Care at Home in Bangalore | Injections, Dressing & IV by Nurse Plus",
+        title: "Injections, Dressing & IV at Home in Bangalore | Nursing Care by Nurse Plus",
         description:
             "Book certified nurses for injection, wound dressing, IV drip, and post-surgery care at home in Bangalore. Nurse Plus provides 24x7 professional and affordable home nursing services you can trust.",
         keywords:
             "nurse for injection at home, nursing care Bangalore, home nurse Bangalore, wound dressing at home, IV drip at home, home healthcare Bangalore, Nurse Plus",
-        url: "https://nurseplus.shakiltech.com/",
+        url: "https://nurseplus.in/",
     });
 
     return (

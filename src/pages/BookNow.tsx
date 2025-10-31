@@ -15,7 +15,7 @@ export default function BookNowPage() {
             "Schedule your home healthcare service with Nurse Plus. Choose doctor consultations, nursing, physiotherapy, elder care, and lab tests at your convenience.",
         keywords:
             "Book healthcare Bangalore, Nurse Plus appointment, Doctor consultation, Nursing, Physiotherapy, Elder care, Lab tests",
-        url: "https://nurseplus.shakiltech.com/book-now",
+        url: "https://nurseplus.in/book-now",
     });
 
     return (

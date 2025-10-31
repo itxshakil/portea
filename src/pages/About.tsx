@@ -11,7 +11,7 @@ const AboutPage: React.FC = () => {
             "Learn about Nurse Plus, Bangalore's trusted home healthcare provider. Our mission: compassionate care, professional medical services, and wellness at home.",
         keywords:
             "Nurse Plus, Home healthcare Bangalore, About us, Doctor consultation, Nursing, Physiotherapy, Elder care",
-        url: "https://nurseplus.shakiltech.com/about",
+        url: "https://nurseplus.in/about",
     });
 
     return (
