@@ -3,6 +3,16 @@ import { Link } from "react-router-dom"
 import Logo from "../assets/logo.png" // Adjust the path as necessary
 
 export default function Footer() {
+    const trackEvent = (eventName: string, label: string) => {
+        if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", eventName, {
+                event_category: "Engagement",
+                event_label: label,
+                value: 1,
+            });
+        }
+    };
+
     return (
         <footer className="bg-gray-900 text-gray-200 dark:bg-gray-800 dark:text-gray-200">
             <div className="container px-4 md:px-6 mx-auto py-12">
@@ -16,16 +26,24 @@ export default function Footer() {
                             Nurse Plus Medical delivers quality healthcare services at the comfort of your home in Bangalore.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-gray-400 hover:text-white dark:hover:text-teal-400" aria-label="Facebook">
+                            <a href="#"
+                               onClick={() => trackEvent("social_click", "Facebook")}
+                               className="text-gray-400 hover:text-white dark:hover:text-teal-400" aria-label="Facebook">
                                 <Facebook className="h-5 w-5" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-white dark:hover:text-teal-400" aria-label="Twitter">
+                            <a href="#"
+                               onClick={() => trackEvent("social_click", "Twitter")}
+                               className="text-gray-400 hover:text-white dark:hover:text-teal-400" aria-label="Twitter">
                                 <Twitter className="h-5 w-5" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-white dark:hover:text-teal-400" aria-label="Instagram">
+                            <a href="#"
+                               onClick={() => trackEvent("social_click", "Instagram")}
+                               className="text-gray-400 hover:text-white dark:hover:text-teal-400" aria-label="Instagram">
                                 <Instagram className="h-5 w-5" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-white dark:hover:text-teal-400" aria-label="LinkedIn">
+                            <a href="#"
+                               onClick={() => trackEvent("social_click", "LinkedIn")}
+                               className="text-gray-400 hover:text-white dark:hover:text-teal-400" aria-label="LinkedIn">
                                 <Linkedin className="h-5 w-5" />
                             </a>
                         </div>
@@ -88,6 +106,7 @@ export default function Footer() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-start gap-3"
+                                    onClick={() => trackEvent("location_click", "Google Maps")}
                                 >
                                     <MapPin className="h-5 w-5 text-teal-500 flex-shrink-0 mt-0.5" />
                                     <span className="text-gray-400 dark:text-gray-300">
@@ -100,6 +119,7 @@ export default function Footer() {
                             <li className="flex items-center gap-3">
                                 <Phone className="h-5 w-5 text-teal-500 flex-shrink-0" />
                                 <a
+                                    onClick={() => trackEvent("call_now_click", "Footer - Call Nurse 1")}
                                     href="tel:+918310853708"
                                     className="text-gray-400 dark:text-gray-300 hover:text-teal-400 transition-colors"
                                 >
@@ -110,6 +130,7 @@ export default function Footer() {
                             <li className="flex items-center gap-3">
                                 <Phone className="h-5 w-5 text-teal-500 flex-shrink-0" />
                                 <a
+                                    onClick={() => trackEvent("call_now_click", "Footer - Call Nurse 2")}
                                     href="tel:+916006393917"
                                     className="text-gray-400 dark:text-gray-300 hover:text-teal-400 transition-colors"
                                 >
@@ -121,6 +142,7 @@ export default function Footer() {
                                 <Mail className="h-5 w-5 text-teal-500 flex-shrink-0" />
                                 <a
                                     href="mailto:info@nurseplus.com"
+                                    onClick={() => trackEvent("email_click", "Footer - info@nurseplus.com")}
                                     className="text-gray-400 dark:text-gray-300 hover:text-teal-400 transition-colors"
                                 >
                                     info@nurseplus.com

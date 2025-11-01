@@ -97,6 +97,16 @@ export default function Header() {
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
 
+    const trackEvent = (eventName: string, label: string) => {
+        if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", eventName, {
+                event_category: "Engagement",
+                event_label: label,
+                value: 1,
+            });
+        }
+    };
+
     return (
         <header
             className={`sticky top-0 z-50 w-full transition-all duration-300 bg-white dark:bg-gray-900 ${
@@ -128,6 +138,7 @@ export default function Header() {
                         <div className="flex items-center">
                             <a
                                 href="tel:+918310853708"
+                                onClick={() => trackEvent("call_now_click", "Header Call")}
                                 className="flex items-center ml-6 bg-gray-50 px-4 py-2 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700 text-gray-800 dark:text-gray-200 font-medium text-sm hover:bg-teal-50 dark:hover:bg-teal-700 transition-colors duration-200"
                             >
                                 <img loading="lazy" src={IndiaFlag} alt="India Flag" className="h-4 w-auto mr-2" />
@@ -218,14 +229,18 @@ export default function Header() {
                             </Link>
                             <div className="h-px bg-gray-200 dark:bg-gray-700 my-4"></div>
 
-                            <a href="tel:+918310853708" className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-100 dark:border-gray-700 flex items-center justify-between mb-4">
+                            <a href="tel:+918310853708"
+                               onClick={() => trackEvent("call_now_click", "Header Call")}
+                               className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-100 dark:border-gray-700 flex items-center justify-between mb-4">
                                 <div className="flex items-center gap-2">
                                     <img loading="lazy" src={IndiaFlag} alt="India Flag" width={24} height={16} className="h-4 w-auto" />
                                     <span className="text-sm font-medium text-gray-800 dark:text-gray-200">8310853708</span>
                                 </div>
                                 <Phone className="w-5 h-5 text-teal-600" />
                             </a>
-                            <a href="tel:+916006393917" className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-100 dark:border-gray-700 flex items-center justify-between mb-4">
+                            <a href="tel:+916006393917"
+                               onClick={() => trackEvent("call_now_click", "Header Call")}
+                               className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-100 dark:border-gray-700 flex items-center justify-between mb-4">
                                 <div className="flex items-center gap-2">
                                     <img loading="lazy" src={IndiaFlag} alt="India Flag" width={24} height={16} className="h-4 w-auto" />
                                     <span className="text-sm font-medium text-gray-800 dark:text-gray-200">6006393917</span>

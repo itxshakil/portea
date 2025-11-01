@@ -293,6 +293,16 @@ export default function ServicePage() {
         url: window.location.href,
     });
 
+    const trackEvent = (eventName: string, label: string) => {
+        if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", eventName, {
+                event_category: "Engagement",
+                event_label: label,
+                value: 1,
+            });
+        }
+    };
+
     return (
         <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200 transition-colors duration-300">
             {/* Hero Section */}
@@ -400,6 +410,7 @@ export default function ServicePage() {
                         {/* Primary CTA: Call Now */}
                         <a
                             href="tel:+918310853708"
+                            onClick={() => trackEvent("call_now_click", "Service Page")}
                             className="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 inline-flex items-center justify-center gap-2"
                         >
                             <svg
@@ -435,6 +446,8 @@ export default function ServicePage() {
                                     "Hello! 👋 I'm interested in Nurse Plus’s home healthcare services. Could you please help me book an appointment or share more details?";
                                 const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
                                 window.open(whatsappLink, "_blank");
+
+                                trackEvent("whatsapp_click", "Service Detail Page");
                             }}
                             className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium text-lg shadow hover:shadow-md transition transform hover:-translate-y-0.5 inline-flex items-center justify-center gap-2"
                         >

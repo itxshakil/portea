@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { Calendar, CheckCircle2 } from "lucide-react";
 
 const services = [
@@ -22,6 +22,16 @@ const bangaloreAreas = [
     "Yelahanka",
 ];
 
+const trackEvent = (eventName: string, label: string) => {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", eventName, {
+            event_category: "Engagement",
+            event_label: label,
+            value: 1,
+        });
+    }
+};
+
 export default function BookAppointment() {
     const [formData, setFormData] = useState({
         name: "",
@@ -37,6 +47,10 @@ export default function BookAppointment() {
     const [errors, setErrors] = useState<any>({});
 
     const today = new Date().toISOString().split("T")[0];
+
+    useEffect(() => {
+        trackEvent("appointment_form_viewed", "Book Appointment - Form Viewed");
+    }, []);
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -68,6 +82,8 @@ export default function BookAppointment() {
         }
 
         setLoading(true);
+
+        trackEvent("appointment_form_submitted", "Book Appointment - Form Submitted");
         try {
             const response = await fetch("https://nurseplus.in/send-booking.php", {
                 method: "POST",
@@ -80,6 +96,8 @@ export default function BookAppointment() {
                 setSuccess(true);
                 setFormData({ name: "", phone: "", email: "", area: "", service: "", message: "" });
                 setDate("");
+
+                trackEvent("appointment_booked", "Book Appointment - Appointment Booked");
             } else {
                 setErrors(result.errors || {});
             }

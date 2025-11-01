@@ -14,6 +14,16 @@ const AboutPage: React.FC = () => {
         url: "https://nurseplus.in/about",
     });
 
+    const trackEvent = (eventName: string, label: string) => {
+        if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", eventName, {
+                event_category: "Engagement",
+                event_label: label,
+                value: 1,
+            });
+        }
+    };
+
     return (
         <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
             {/* Hero Section */}
@@ -148,6 +158,7 @@ const AboutPage: React.FC = () => {
                         </a>
                         <a
                             href="tel:+9183108537080"
+                            onClick={() => trackEvent("call_now_click", "About Page")}
                             className="border border-white text-white hover:bg-teal-700 px-8 py-2 rounded font-medium transition"
                         >
                             Contact Us
@@ -156,6 +167,7 @@ const AboutPage: React.FC = () => {
                             href="https://wa.me/9183108537080"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => trackEvent("whatsapp_click", "About Page")}
                             className="bg-green-500 hover:bg-green-600 text-white px-8 py-2 rounded font-medium transition"
                         >
                             WhatsApp Us

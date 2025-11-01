@@ -18,6 +18,16 @@ export default function Hero() {
         url: "https://nurseplus.in/",
     });
 
+    const trackEvent = (eventName: string, label: string) => {
+        if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", eventName, {
+                event_category: "Engagement",
+                event_label: label,
+                value: 1,
+            });
+        }
+    };
+
     return (
         <section className="relative bg-white dark:bg-gray-900 py-12 md:py-20 overflow-hidden transition-colors duration-300">
             <div className="container px-4 md:px-6 mx-auto">
@@ -42,6 +52,7 @@ export default function Hero() {
                         <div className="flex flex-col sm:flex-row gap-4 pt-4">
                             <a
                                 href="tel:8310853708"
+                                onClick={() => trackEvent("call_now_click", "Hero - Call Nurse Now")}
                                 className="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 px-8 py-4 rounded-lg text-white font-semibold text-lg transition-all duration-200 shadow-md hover:shadow-lg flex items-center justify-center"
                             >
                                 <PhoneIcon className="mr-2 h-6 w-6" />
@@ -134,6 +145,7 @@ export default function Hero() {
 
                     <a
                         href="tel:8310853708"
+                        onClick={() => trackEvent("call_now_click", "Core Service - Call Nurse Now")}
                         className="inline-flex items-center mt-12 px-10 py-4 rounded-full bg-gradient-to-r from-teal-600 to-teal-700 text-white font-semibold text-lg hover:from-teal-700 hover:to-teal-800 transition-all duration-300 shadow-md hover:shadow-lg"
                     >
                         <PhoneIcon className="mr-2 h-6 w-6" />

@@ -11,6 +11,16 @@ const PrivacyPage: React.FC = () => {
         url: "https://nurseplus.in/privacy-policy",
     });
 
+    const trackEvent = (eventName: string, label: string) => {
+        if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", eventName, {
+                event_category: "Engagement",
+                event_label: label,
+                value: 1,
+            });
+        }
+    };
+
     return (
         <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
             {/* Hero Section */}
@@ -121,11 +131,13 @@ const PrivacyPage: React.FC = () => {
                         </a>
                         <a
                             href="tel:+9183108537080"
+                            onClick={() => trackEvent("call_now_click", "Privacy Page 1")}
                             className="border border-white text-white hover:bg-teal-700 dark:hover:bg-teal-800 px-8 py-2 rounded font-medium transition"
                         >
                             Contact Us
                         </a>
                         <a
+                            onClick={() => trackEvent("call_now_click", "Privacy Page 2")}
                             href="https://wa.me/9183108537080"
                             target="_blank"
                             rel="noopener noreferrer"

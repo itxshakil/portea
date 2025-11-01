@@ -18,6 +18,16 @@ export default function BookNowPage() {
         url: "https://nurseplus.in/book-now",
     });
 
+    const trackEvent = (eventName: string, label: string) => {
+        if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", eventName, {
+                event_category: "Engagement",
+                event_label: label,
+                value: 1,
+            });
+        }
+    };
+
     return (
         <section className="min-h-screen py-16 bg-gradient-to-br from-slate-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
             <div className="container mx-auto px-4 md:px-6">
@@ -54,6 +64,7 @@ export default function BookNowPage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-start gap-4 group"
+                                onClick={() => trackEvent("location_click", "Google Maps")}
                             >
                                 <div className="p-3 bg-teal-100 dark:bg-teal-900/30 rounded-xl">
                                     <MapPin className="h-5 w-5 text-teal-600 dark:text-teal-400" />
@@ -71,6 +82,7 @@ export default function BookNowPage() {
                             </div>
                             <a
                                 href="tel:+918310853708"
+                                onClick={() => trackEvent("call_now_click", "Call Nurse 1")}
                                 className="text-gray-600 dark:text-gray-300 hover:text-teal-500 transition-colors font-medium"
                             >
                                 +91 83108 53708
@@ -83,6 +95,7 @@ export default function BookNowPage() {
                             </div>
                             <a
                                 href="tel:+916006393917"
+                                onClick={() => trackEvent("call_now_click", "Call Nurse 2")}
                                 className="text-gray-600 dark:text-gray-300 hover:text-teal-500 transition-colors font-medium"
                             >
                                 +91 60063 93917
@@ -95,6 +108,7 @@ export default function BookNowPage() {
                             </div>
                             <a
                                 href="mailto:info@nurseplus.com"
+                                onClick={() => trackEvent("mail_click", "Call Nurse 2")}
                                 className="text-gray-600 dark:text-gray-300 hover:text-teal-500 transition-colors font-medium"
                             >
                                 info@nurseplus.com

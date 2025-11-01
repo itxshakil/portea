@@ -9,6 +9,16 @@ const WhatsAppButton = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const trackEvent = (eventName: string, label: string) => {
+        if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", eventName, {
+                event_category: "Engagement",
+                event_label: label,
+                value: 1,
+            });
+        }
+    };
+
     const handleWhatsAppClick = () => {
         const phoneNumber = "918310853708";
         const message =
@@ -16,6 +26,8 @@ const WhatsAppButton = () => {
         const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
         window.open(whatsappLink, "_blank");
+
+        trackEvent("whatsapp_click", "Floating WhatsApp button");
     };
 
     return (
