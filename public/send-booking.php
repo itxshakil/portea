@@ -95,8 +95,8 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-$adminEmail = 'itxshakil@gmail.com';
-$bccList = ['itxshaky@gmail.com', 'itxshakiil@gmail.com'];
+$adminEmail = 'chandan.cm1010@gmail.com';
+$bccList = ['itxshakil@gmail.com'];
 $subjectAdmin = "📅 New Appointment Request - Nurse Plus ($service)";
 $subjectUser  = '✅ Appointment Request Received - Nurse Plus';
 
