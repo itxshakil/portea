@@ -34,7 +34,7 @@ const AboutPage: React.FC = () => {
                         </div>
                         <div className="relative">
                             <div className="relative h-[300px] md:h-[700px] w-full rounded-lg overflow-hidden">
-                                <img src={About} alt="Nurse Plus Medical Team" className="object-cover w-full h-full" />
+                                <img loading="lazy" src={About} alt="Nurse Plus Medical Team" className="object-cover w-full h-full" />
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@ const AboutPage: React.FC = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
-                            <img src={Journey} alt="Nurse Plus's Journey" className="object-cover w-full h-full" />
+                            <img loading="lazy" src={Journey} alt="Nurse Plus's Journey" className="object-cover w-full h-full" />
                         </div>
                         <div className="space-y-6 text-gray-600 dark:text-gray-300">
                             <p>

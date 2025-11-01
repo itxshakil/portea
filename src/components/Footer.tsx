@@ -10,7 +10,7 @@ export default function Footer() {
                     {/* Logo & Description */}
                     <div className="space-y-4">
                         <Link to="/" className="inline-block">
-                            <img src={Logo} alt="Nurse Plus Logo" width={150} height={40} className="h-auto" />
+                            <img loading="lazy" src={Logo} alt="Nurse Plus Logo" width={150} height={40} className="h-auto" />
                         </Link>
                         <p className="text-gray-400 dark:text-gray-300">
                             Nurse Plus Medical delivers quality healthcare services at the comfort of your home in Bangalore.

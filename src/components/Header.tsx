@@ -105,7 +105,7 @@ export default function Header() {
         >
             <div className="container flex items-center justify-between h-16 px-4 mx-auto md:px-6">
                 <Link to="/" className="flex items-center mr-6">
-                    <img src={Logo} alt="Nurse Plus Logo" width={150} height={40} className="h-24 w-auto" />
+                    <img loading="lazy" src={Logo} alt="Nurse Plus Logo" width={150} height={40} className="h-24 w-auto" />
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -130,7 +130,7 @@ export default function Header() {
                                 href="tel:+918310853708"
                                 className="flex items-center ml-6 bg-gray-50 px-4 py-2 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700 text-gray-800 dark:text-gray-200 font-medium text-sm hover:bg-teal-50 dark:hover:bg-teal-700 transition-colors duration-200"
                             >
-                                <img src={IndiaFlag} alt="India Flag" className="h-4 w-auto mr-2" />
+                                <img loading="lazy" src={IndiaFlag} alt="India Flag" className="h-4 w-auto mr-2" />
                                 <Phone className="w-4 h-4 text-teal-600 mr-1" />
                                 8310853708
                             </a>
@@ -220,14 +220,14 @@ export default function Header() {
 
                             <a href="tel:+918310853708" className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-100 dark:border-gray-700 flex items-center justify-between mb-4">
                                 <div className="flex items-center gap-2">
-                                    <img src={IndiaFlag} alt="India Flag" width={24} height={16} className="h-4 w-auto" />
+                                    <img loading="lazy" src={IndiaFlag} alt="India Flag" width={24} height={16} className="h-4 w-auto" />
                                     <span className="text-sm font-medium text-gray-800 dark:text-gray-200">8310853708</span>
                                 </div>
                                 <Phone className="w-5 h-5 text-teal-600" />
                             </a>
                             <a href="tel:+916006393917" className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-100 dark:border-gray-700 flex items-center justify-between mb-4">
                                 <div className="flex items-center gap-2">
-                                    <img src={IndiaFlag} alt="India Flag" width={24} height={16} className="h-4 w-auto" />
+                                    <img loading="lazy" src={IndiaFlag} alt="India Flag" width={24} height={16} className="h-4 w-auto" />
                                     <span className="text-sm font-medium text-gray-800 dark:text-gray-200">6006393917</span>
                                 </div>
                                 <Phone className="w-5 h-5 text-teal-600" />

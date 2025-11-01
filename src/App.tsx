@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import AboutPage from "./pages/About"
-import InvestorRelationsPage from "./pages/InvestorRelations"
 import BookNowPage from "./pages/BookNow"
 import Footer from "./components/Footer"
 import ServiceDetail from "./pages/ServiceDetail"
@@ -25,7 +24,6 @@ function App() {
              <Route path="/about" element={<AboutPage />} />
              <Route path="/services" element={<Service />} />
              <Route path="/services/:service" element={<ServiceDetail />} />
-              <Route path="/investor-relations" element={<InvestorRelationsPage />} />
                <Route path="/book-now" element={<BookNowPage />} />
                <Route path="/terms-conditions" element={<Terms />} />
                <Route path="/privacy-policy" element={<Privacy />} />
