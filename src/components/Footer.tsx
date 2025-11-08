@@ -141,11 +141,11 @@ export default function Footer() {
                             <li className="flex items-center gap-3">
                                 <Mail className="h-5 w-5 text-teal-500 flex-shrink-0" />
                                 <a
-                                    href="mailto:info@nurseplus.com"
-                                    onClick={() => trackEvent("email_click", "Footer - info@nurseplus.com")}
+                                    href="mailto:chandan.cm1010@gmail.com"
+                                    onClick={() => trackEvent("email_click", "Footer - chandan.cm1010@gmail.com")}
                                     className="text-gray-400 dark:text-gray-300 hover:text-teal-400 transition-colors"
                                 >
-                                    info@nurseplus.com
+                                    chandan.cm1010@gmail.com
                                 </a>
                             </li>
                         </ul>

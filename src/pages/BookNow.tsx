@@ -107,11 +107,11 @@ export default function BookNowPage() {
                                 <Mail className="h-5 w-5 text-teal-600 dark:text-teal-400" />
                             </div>
                             <a
-                                href="mailto:info@nurseplus.com"
+                                href="mailto:chandan.cm1010@gmail.com"
                                 onClick={() => trackEvent("mail_click", "Call Nurse 2")}
                                 className="text-gray-600 dark:text-gray-300 hover:text-teal-500 transition-colors font-medium"
                             >
-                                info@nurseplus.com
+                                chandan.cm1010@gmail.com
                             </a>
                         </li>
                     </ul>

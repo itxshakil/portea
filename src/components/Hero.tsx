@@ -3,6 +3,7 @@ import WhyChooseUs from "./WhyChooseUs";
 import HealthcarePackages from "./HealthcarePackages";
 import Testimonials from "./Testimonials";
 import BookAppointment from "./BookAppointment";
+import HairCareSection from "./HairCareSection";
 import FAQSection from "./FAQ";
 import Nurse from "../assets/nurse.png";
 import { PhoneIcon } from "lucide-react";
@@ -161,6 +162,7 @@ export default function Hero() {
             <Services />
             <WhyChooseUs />
             <HealthcarePackages />
+            <HairCareSection />
             <Testimonials />
 
             {/* Appointment Booking Section */}
