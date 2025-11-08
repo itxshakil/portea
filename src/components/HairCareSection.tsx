@@ -3,6 +3,16 @@ import GFC from "../assets/hair_fall_girl.png";
 import { PhoneIcon } from "lucide-react";
 
 const HairCareSection = () => {
+    const trackEvent = (eventName: string, label: string) => {
+        if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", eventName, {
+                event_category: "Engagement",
+                event_label: label,
+                value: 1,
+            });
+        }
+    };
+
     return (
         <section className="relative overflow-hidden py-20 bg-gradient-to-b from-white via-teal-50/20 to-white dark:from-gray-900 dark:via-gray-800/30 dark:to-gray-900 transition-colors duration-500">
             {/* Background Glow */}
@@ -134,7 +144,8 @@ const HairCareSection = () => {
                             </ul>
 
                             <a
-                                href="tel:8609079657"
+                                href="tel:8310853708"
+                                onClick={() => trackEvent("hair_transplant_call", "Hair Transplant Call")}
                                 className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-teal-600 text-white font-semibold text-base hover:bg-teal-700 transition-all duration-300 shadow-md hover:shadow-lg"
                             >
                                 <PhoneIcon className="w-5 h-5" />

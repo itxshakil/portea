@@ -156,7 +156,7 @@ export default function Footer() {
                 <div className="border-t border-gray-800 dark:border-gray-700 mt-12 pt-8 text-center text-gray-400 dark:text-gray-300 text-sm space-y-2">
                     <p>&copy; {new Date().getFullYear()} Nurse Plus Medical. All rights reserved.</p>
 
-                    <p className="flex items-center justify-center gap-1">
+                    <p className="flex items-center justify-center gap-1 invisible">
                         Designed and Developed with{" "}
                         <Heart className="h-4 w-4 text-red-500 fill-red-500" /> by{" "}
                         <a href="https://nargis-khatun.vercel.app/" className="text-teal-400 font-medium">Nargis Khatun</a>
