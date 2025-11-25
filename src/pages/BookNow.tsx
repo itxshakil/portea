@@ -81,11 +81,11 @@ export default function BookNowPage() {
                                 <Phone className="h-5 w-5 text-teal-600 dark:text-teal-400" />
                             </div>
                             <a
-                                href="tel:+918310853708"
+                                href="tel:+917019379994"
                                 onClick={() => trackEvent("call_now_click", "Call Nurse 1")}
                                 className="text-gray-600 dark:text-gray-300 hover:text-teal-500 transition-colors font-medium"
                             >
-                                +91 83108 53708
+                                +91 70193 79994
                             </a>
                         </li>
 

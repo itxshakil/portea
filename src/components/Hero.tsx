@@ -52,7 +52,7 @@ export default function Hero() {
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4">
                             <a
-                                href="tel:8310853708"
+                                href="tel:7019379994"
                                 onClick={() => trackEvent("call_now_click", "Hero - Call Nurse Now")}
                                 className="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 px-8 py-4 rounded-lg text-white font-semibold text-lg transition-all duration-200 shadow-md hover:shadow-lg flex items-center justify-center"
                             >
@@ -145,7 +145,7 @@ export default function Hero() {
                     </div>
 
                     <a
-                        href="tel:8310853708"
+                        href="tel:7019379994"
                         onClick={() => trackEvent("call_now_click", "Core Service - Call Nurse Now")}
                         className="inline-flex items-center mt-12 px-10 py-4 rounded-full bg-gradient-to-r from-teal-600 to-teal-700 text-white font-semibold text-lg hover:from-teal-700 hover:to-teal-800 transition-all duration-300 shadow-md hover:shadow-lg"
                     >

@@ -120,10 +120,10 @@ export default function Footer() {
                                 <Phone className="h-5 w-5 text-teal-500 flex-shrink-0" />
                                 <a
                                     onClick={() => trackEvent("call_now_click", "Footer - Call Nurse 1")}
-                                    href="tel:+918310853708"
+                                    href="tel:+917019379994"
                                     className="text-gray-400 dark:text-gray-300 hover:text-teal-400 transition-colors"
                                 >
-                                    +91 83108 53708
+                                    +91 70193 79994
                                 </a>
                             </li>
 

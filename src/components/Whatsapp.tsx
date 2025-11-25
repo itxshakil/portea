@@ -20,7 +20,7 @@ const WhatsAppButton = () => {
     };
 
     const handleWhatsAppClick = () => {
-        const phoneNumber = "918310853708";
+        const phoneNumber = "917019379994";
         const message =
             "Hello! 👋 I'm interested in Nurse Plus’s home healthcare services. Could you please help me book an appointment or share more details?";
         const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;

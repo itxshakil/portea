@@ -473,7 +473,7 @@
       "name": "Call Nurse",
       "short_name": "Call",
       "description": "Call our nurse helpline instantly",
-      "url": "tel:8310853708",
+      "url": "tel:7019379994",
       "icons": [{ "src": "/icons/android/android-launchericon-96-96.png", "sizes": "96x96", "type": "image/png" }]
     }
   ],

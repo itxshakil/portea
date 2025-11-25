@@ -130,7 +130,7 @@ const PrivacyPage: React.FC = () => {
                             Book a Service
                         </a>
                         <a
-                            href="tel:+9183108537080"
+                            href="tel:+917019379994"
                             onClick={() => trackEvent("call_now_click", "Privacy Page 1")}
                             className="border border-white text-white hover:bg-teal-700 dark:hover:bg-teal-800 px-8 py-2 rounded font-medium transition"
                         >
@@ -138,7 +138,7 @@ const PrivacyPage: React.FC = () => {
                         </a>
                         <a
                             onClick={() => trackEvent("call_now_click", "Privacy Page 2")}
-                            href="https://wa.me/9183108537080"
+                            href="https://wa.me/917019379994"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 text-white px-8 py-2 rounded font-medium transition"

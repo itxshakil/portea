@@ -157,14 +157,14 @@ const AboutPage: React.FC = () => {
                             Book a Service
                         </a>
                         <a
-                            href="tel:+9183108537080"
+                            href="tel:+917019379994"
                             onClick={() => trackEvent("call_now_click", "About Page")}
                             className="border border-white text-white hover:bg-teal-700 px-8 py-2 rounded font-medium transition"
                         >
                             Contact Us
                         </a>
                         <a
-                            href="https://wa.me/9183108537080"
+                            href="https://wa.me/917019379994"
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => trackEvent("whatsapp_click", "About Page")}

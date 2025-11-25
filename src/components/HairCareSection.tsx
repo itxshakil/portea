@@ -144,7 +144,7 @@ const HairCareSection = () => {
                             </ul>
 
                             <a
-                                href="tel:8310853708"
+                                href="tel:7019379994"
                                 onClick={() => trackEvent("hair_transplant_call", "Hair Transplant Call")}
                                 className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-teal-600 text-white font-semibold text-base hover:bg-teal-700 transition-all duration-300 shadow-md hover:shadow-lg"
                             >

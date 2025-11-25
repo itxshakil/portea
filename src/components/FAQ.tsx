@@ -10,7 +10,7 @@ const faqs = [
     {
         question: "How do I book a home healthcare service?",
         answer:
-            "You can book our services by filling out the appointment form on our website, calling our customer care number at +91-8310853708, or using our mobile app. Our team will contact you to confirm the appointment details.",
+            "You can book our services by filling out the appointment form on our website, calling our customer care number at +91-7019379994, or using our mobile app. Our team will contact you to confirm the appointment details.",
     },
     {
         question: "What qualifications do your healthcare professionals have?",

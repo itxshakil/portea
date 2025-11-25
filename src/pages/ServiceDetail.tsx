@@ -409,7 +409,7 @@ export default function ServicePage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         {/* Primary CTA: Call Now */}
                         <a
-                            href="tel:+918310853708"
+                            href="tel:+917019379994"
                             onClick={() => trackEvent("call_now_click", "Service Page")}
                             className="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 inline-flex items-center justify-center gap-2"
                         >
@@ -441,7 +441,7 @@ export default function ServicePage() {
                         {/* Tertiary CTA: WhatsApp */}
                         <button
                             onClick={() => {
-                                const phoneNumber = "918310853708";
+                                const phoneNumber = "917019379994";
                                 const message =
                                     "Hello! 👋 I'm interested in Nurse Plus’s home healthcare services. Could you please help me book an appointment or share more details?";
                                 const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
